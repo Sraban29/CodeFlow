@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CodeFlow</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="css/main.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<div class="split left">
+  <div class="slideshow-container">
+
+<div class="mySlides fade">
+  <img src="images/img1.png" style="width:100%;height: 100vh;">
+</div>
+
+<div class="mySlides fade">
+  <img src="images/img2.png" style="width:100%;height: 100vh;">
+
+</div>
+
+<div class="mySlides fade">
+  <img src="images/img3.jpg" style="width:100%;height: 100vh;">
+  
+</div>
+
+</div>
+<br>
+
+<div style="text-align:center;">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+<div class="split right">
+	<div class="signup">
+		<div class="insider">
+	<form action="/signup_page.php" method="post">
+		<p style="color:gray;"><i><b >Create Account</b></i></p>
+		<h6><i>Give us some valuable information to acess CodeFlow Free</i></h6>
+    <div >
+	  <label for="fname">User name:</label><br>
+	  <input type="text" id="uname" name="uname" placeholder="UserName" required><br>
+	  
+	  <label for="fname">Email:</label><br>
+	  <input type="text" id="email" name="email" placeholder="Email Address" required><br>
+	  
+	  <label for="fname">Password:</label><br>
+	  <input type="text" id="pass" name="pass" placeholder="Password" required><br>
+	  
+	  <label for="fname">Confirm Password</label><br>
+	  <input type="text" id="cpass" name="cpass" placeholder="Confirm Password" required><br>
+	  <input type="checkbox" name="checkbox" required>
+	  <h6 style="font-weight:normal;display:inline;"><i>
+	  By creating an account you agree the <a href="#">terms of use</a> and our <a href="#">privacy policy</a></i>
+	  </h6>
+	  </div>
+	  <button type ="submit">Create Account</button>
+	</form>
+	
+	
+	<br>
+	<br>
+	<h6 style="font-weight:normal;display:inline;">Already have a account !!!!!Click here to login</h6>
+  <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+
+<div id="id01" class="modal">
+  
+  <form class="modal-content animate" action="/action_page.php" method="post">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="images/avtar.png" alt="Avatar" class="avatar">
+    </div>
+
+    <div class="container">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" required>
+<br>
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+        
+      <button type="submit">Login</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      <span class="psw">Forgot <a href="#">password?</a></span>
+    </div>
+  </form>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+	var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+</script>
+</body>
+</html>

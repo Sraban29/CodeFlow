@@ -1,0 +1,212 @@
+* {
+  box-sizing: border-box;
+}
+body{
+	font-family: Verdana,Geneva,sans-serif; }
+
+.interior{
+	height:92vh;
+	width:30%;
+position: fixed;
+
+}
+.header{
+	width:100%;
+	margin-top: 0;
+	 
+}
+.header img{
+	width:93px;
+	height: auto;
+margin-left: 20px;
+}
+
+.tech{
+	height: 60%;
+	width: 95%;
+	margin-top:5px;
+	margin-left: 3px;
+	background-color:white;
+	
+	-moz-box-shadow: 5px 5px 5px rgba(68,68,68,0.6);
+	-webkit-box-shadow: 5px 5px 5px rgba(68,68,68,0.6);
+	box-shadow: 0 0 10px rgba(68,68,68,0.6);
+
+	filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=3,MakeShadow=true,ShadowOpacity=0.30);
+	-ms-filter: "progid:DXImageTransform.Microsoft.Blur(PixelRadius=3,MakeShadow=true,ShadowOpacity=0.30)";
+	zoom: 1;	
+}
+.drop{
+	height: 35%;
+	width: 95%;
+	margin-left: 3px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	background-color: white; 
+	-moz-box-shadow: 5px 5px 5px rgba(68,68,68,0.6);
+	-webkit-box-shadow: 5px 5px 5px rgba(68,68,68,0.6);
+	box-shadow: 0px 0px 10px rgba(68,68,68,0.6);
+
+	filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=3,MakeShadow=true,ShadowOpacity=0.30);
+	-ms-filter: "progid:DXImageTransform.Microsoft.Blur(PixelRadius=3,MakeShadow=true,ShadowOpacity=0.30)";
+	zoom: 1;
+}
+
+.section{
+	width:70%;
+	float: right; 
+	height:90vh;
+	box-shadow: 0 0 10px rgba(68,68,68,0.6);
+	margin-top:5px;
+
+}
+
+.container{
+	width:95%;
+padding-top:10px;
+padding-left:10px; 
+	background-color: #fff; 
+}
+
+h3{
+	font-weight: normal;
+	margin: 3px; 
+}
+.list select{
+	 background: none repeat scroll 0 0 #FFFFFF;
+	border: 1px solid #E5E5E5;
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 0 0 10px #E8E8E8 outset;
+    height: 40px;
+    width: 100%;
+}
+
+
+.checkbox-label input{
+	position: absolute;
+	opacity:0 ;
+	cursor :pointer;
+	}
+
+
+	.checkbox-label .checkbox-custom{
+		position: absolute;
+		display: inline-block;
+		height:18px;
+		width: 18px;
+		background-color: transparent;
+		border-radius: 10px;
+		border:2px solid #009BFF; 
+		transition:  all 0.4s ease-out;
+	-webkit-transition:all 0.4s ease-out;
+	-moz-transition:all 0.4s ease-out;
+	-ms-transition:all 0.4s ease-out;
+	-o-transition:all 0.4s ease-out;
+	}
+	.checkbox .checkbox-custom::after{
+		position: absolute;
+		display: inline-block;
+		content: "";
+		left: 12px;
+		top: 12px;
+		height: 0px;
+		width: 0px;
+		border-radius: 10px;
+		border:solid #009BFF;
+		border-width: 0px 3px 3px 0px;
+		-webkit-transform: rotate(0deg) scale(0);
+		-ms-transform:rotate(0deg) scale(0);
+		transform:rotate(0deg) scale(0);
+		opacity: 1;
+		transition:  all 0.4s ease-out;
+		-webkit-transition:all 0.4s ease-out;
+		-moz-transition:all 0.4s ease-out;
+		-ms-transition:all 0.4s ease-out;
+		-o-transition:all 0.4s ease-out;
+	}
+
+.checkbox-label input:checked ~ .checkbox-custom{
+	background-color: #009BFF;
+	border-radius: 10px;
+	-webkit-transform:rotate(0deg) scale(1);
+	-ms-transform:rotate(0deg) scale(1);
+	transform:rotate(0deg) scale(1);
+	opacity: 1;
+	border:2px solid #009BFF;
+}
+
+.checkbox-label input:checked ~ .checkbox-custom::after{
+	-webkit-transform:rotate(0deg) scale(1);
+		-ms-transform:rotate(0deg) scale(1);
+		transform:rotate(0deg) scale(1);
+		opacity: 1;
+		width:6px;
+		height:12px;
+		border-width: 0 2px 2px 0;
+		border: solid #FFFFFF;
+		background-color: transparent;
+		border-radius: 0;
+		content:url(''http://i.stack.imgur.com/Ialva.png'');
+
+}
+
+.checkbox-label .checkbox-custom::before{
+	position: absolute;
+	content: "";
+	width: 0px;
+	height: 0px;
+	border-radius: 10px;
+	border:2px solid #009BFF;
+	-webkit-transform: scale(0);
+	-ms-transform: scale(0);
+	transform:scale(0);
+}
+
+.checkbox-label input:checked ~ .checkbox-custom::before{
+	left: -3px;
+	top: -3px;
+	width: 18px;
+	height: 18px;
+	border-radius: 10px;
+	-webkit-transform:scale(3);
+	-ms-transform:scale(3);
+	transform: scale(3);
+	opacity: 0;
+	z-index: 999;
+	transition:  all 0.4s ease-out;
+	-webkit-transition:all 0.4s ease-out;
+	-moz-transition:all 0.4s ease-out;
+	-ms-transition:all 0.4s ease-out;
+	-o-transition:all 0.4s ease-out;
+}
+
+.contain{
+	margin: 10px;
+max-height: 100%;
+}
+
+ul {
+  	padding: 20px;
+  	list-style-type: none;
+  	overflow-y: scroll;
+  	max-height:30vh; 
+}
+.rad{
+	margin:2px; 
+	padding: 5px;
+border:1px solid black;
+display: block;
+border-radius:  15px 50px 30px;
+
+}
+.rad input{
+	content: url('http://i.stack.imgur.com/M3EkO.png');
+  height: 16px;
+  width: 16px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+.rad input:checked{
+	content: url('http://i.stack.imgur.com/Ialva.png');
+}
